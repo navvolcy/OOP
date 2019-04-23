@@ -1,0 +1,22 @@
+class Bozo: # this is the class that the methods are defined under 
+
+    #the initializer method used to assign values to any instance varibles
+   def __init__(self, value):
+      print(f"Creating a Bozo from {value}" )
+      self.value = 2*value
+
+      #this method is computing the instance variable which holds the vaule
+   def clown(self, x):
+       print(f"Clowning: {x}")
+       print(x*self.value)
+       return x + self.value
+   
+def main(): #this is the main body of the program that will apply the class 
+      print("Clowning around now.")
+      c1 = Bozo(3)
+      c2 = Bozo(4)
+      print(c1.clown(3))
+      print(c2.clown(c1.clown(2)))
+
+#call the function 
+main()
